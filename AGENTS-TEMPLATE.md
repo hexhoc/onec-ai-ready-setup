@@ -7,7 +7,7 @@
 - `<configAlias>/src` — основная конфигурация `<base-name>`.
 - `<configAlias>.<ExactExtensionName>/src` — прикладное расширение `<ExactExtensionName>`.
 <!-- feature:yaxunit:start -->
-- `<configAlias>.YAxUnit/src` — тестовый движок; не изменять его исходники без отдельной задачи.
+- `<configAlias>.YAxUnit/src` — тестовый движок; не изменять код, метаданные и другие файлы расширения `YAxUnit`.
 - `<configAlias>.tests/src` — расширение для тестов проекта.
 <!-- feature:yaxunit:end -->
 - XML-исходники созданы Конфигуратором 1С, это не EDT-проект.
