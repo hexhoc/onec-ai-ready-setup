@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "version": "1.4.4",
+  "version": "1.4.5",
   "features": [],
   "files": [
     {
@@ -43,7 +43,7 @@
       "source": "content/rules/coding-standards.md",
       "target": ".opencode/rules/coding-standards.md",
       "requires": [],
-      "sha256": "ba87e40fae1a299b363e4d60404a7ddee93390593f8ce7f1e6438e75e36a0fa4"
+      "sha256": "1d0ea03a80d1ffad6b2d415a9af1feb8c3c24a44c1f2e1bb3ea96b558d80ada4"
     },
     {
       "source": "content/rules/forms.md",
@@ -73,7 +73,7 @@
       "source": "content/rules/query-design.md",
       "target": ".opencode/rules/query-design.md",
       "requires": [],
-      "sha256": "33a48535d5a7e1f38ff4d04438a6c8462f6e77e651ba30490c75e69f9ca68ae4"
+      "sha256": "015959c61e290802747138613d62f5f2e50dd4ee47d9d12e6c2babc034c18d6f"
     },
     {
       "source": "content/rules/reports.md",
@@ -109,7 +109,7 @@
       "source": "content/rules/yaxunit.md",
       "target": ".opencode/rules/yaxunit.md",
       "requires": [],
-      "sha256": "0aead47e8febd964a4c1f6af53ff0f5aab269294a7ed92c277a18e7046c84b48"
+      "sha256": "2c3b313680167df510ac831e038926a6e289da47eca5c02efff82192c415b275"
     }
   ]
 }
