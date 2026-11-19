@@ -36,7 +36,7 @@
 - Архитектурное решение, проектирование поведения или изменение структуры метаданных — `.opencode/rules/architecture.md`.
 - Изменение BSL, включая модули форм и код тестов — `.opencode/rules/coding-standards.md`. Также прочитать: `.opencode/rules/source-search.md`, `.opencode/rules/verification.md`.
 - Анализ или изменение управляемой формы; для Form.Module.bsl добавить маршрут BSL — `.opencode/rules/forms.md`. Также прочитать: `.opencode/rules/verification.md`.
-- Создание, удаление, переименование объекта метаданных или изменение его структуры — `.opencode/rules/metadata.md`. Также прочитать: `.opencode/rules/architecture.md`, `.opencode/rules/source-search.md`, `.opencode/rules/verification.md`.
+- Создание, удаление, переименование объекта метаданных или изменение его структуры — `.opencode/rules/metadata.md`. Также прочитать: `.opencode/rules/access-rights.md`, `.opencode/rules/architecture.md`, `.opencode/rules/source-search.md`, `.opencode/rules/verification.md`.
 - Добавление методов или областей, создание либо реструктуризация модуля — `.opencode/rules/module-structure.md`.
 - Создание или изменение печатной формы, табличного документа либо макета MXL — `.opencode/rules/printing.md`. Также прочитать: `.opencode/rules/verification.md`.
 - Написание или оптимизация запроса, включая запросы СКД и динамических списков — `.opencode/rules/query-design.md`. Также прочитать: `.opencode/rules/source-search.md`, `.opencode/rules/verification.md`.
