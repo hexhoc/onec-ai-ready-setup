@@ -1,14 +1,8 @@
 {
   "schemaVersion": 2,
-  "version": "1.5.0",
+  "version": "1.6.1",
   "features": [],
   "files": [
-    {
-      "source": "content/agents/onec-reviewer.md",
-      "target": ".opencode/agents/onec-reviewer.md",
-      "requires": [],
-      "sha256": "239e2c813ed5afa13ce2d23588abd98825d55028ff2a85205de57457835f516e"
-    },
     {
       "source": "content/commands/yaxunit-test.md",
       "target": ".opencode/commands/yaxunit-test.md",
@@ -34,22 +28,16 @@
       "sha256": "112b2a5cb39f68a382a9828c209a6672b9e2434f1fd5dfa6f946b99044fdef96"
     },
     {
-      "source": "content/rules/code-review.md",
-      "target": ".opencode/rules/code-review.md",
-      "requires": [],
-      "sha256": "aa1a9328d39c6dd28db15a8bd7b7a88ec693b32f0f75c8e66399a2d8d4da2317"
-    },
-    {
       "source": "content/rules/coding-standards.md",
       "target": ".opencode/rules/coding-standards.md",
       "requires": [],
-      "sha256": "55e86164b88d8f89058505caa7fdcded8ffc760f59621c40ebd1b4f11a651576"
+      "sha256": "2a7e9f692008c077753b9728064119e65e2163d80b98121aa24f9c0ad1671eff"
     },
     {
       "source": "content/rules/forms.md",
       "target": ".opencode/rules/forms.md",
       "requires": [],
-      "sha256": "2d818d1531017258cfea598a1fbebbecadfad0deb8958140e1bdfa8980eae91d"
+      "sha256": "a7e2013990144d48885ba207619dad3e6e52a3fc493718559e1d41fa5ee2bd83"
     },
     {
       "source": "content/rules/metadata.md",
@@ -85,7 +73,7 @@
       "source": "content/rules/source-search.md",
       "target": ".opencode/rules/source-search.md",
       "requires": [],
-      "sha256": "a5449683ca9a523a91ab0e0d43dcd526270fdb4625b819ac847ec168037a5858"
+      "sha256": "0fa9e998acdc6783466c484379e07a88d77f84c3461fd09938d36bc3a1c60d24"
     },
     {
       "source": "content/rules/testing.md",
@@ -103,7 +91,7 @@
       "source": "content/rules/verification.md",
       "target": ".opencode/rules/verification.md",
       "requires": [],
-      "sha256": "a3c6e1d0c1db208f7cda5c0962c088a5b1e502804fa04d86aeeda3af6aba79f7"
+      "sha256": "4a2f2f91b8c3a757f6db1795d903d7657d94e46f6f2ba25712d65b028aeaf545"
     },
     {
       "source": "content/rules/yaxunit.md",

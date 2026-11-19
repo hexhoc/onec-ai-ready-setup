@@ -10,7 +10,7 @@
 
 1. Проверяет PowerShell, Git, Python, OpenCode, платформу 1С и доступ к GitHub.
 2. Устанавливает или обновляет project skills из `cc-1c-skills` и отдельный skill для БСП.
-3. Устанавливает собственные правила, команды, субагента и глоссарий по `content/manifest.json`.
+3. Устанавливает собственные правила, команды и глоссарий по `content/manifest.json`.
 4. Выгружает в XML основную конфигурацию и расширения, если выгрузки еще нет.
 6. По отдельному согласию подключает YAxUnit и создаёт расширение `tests`.
 7. Настраивает `.gitattributes`, `.gitignore` и при необходимости инициализирует Git.
@@ -27,9 +27,8 @@
 | `AGENTS-TEMPLATE.md` | Канонический шаблон проектных инструкций и маршрутов правил | На его основе создаётся или обновляется `AGENTS.md`; сам шаблон в проект не копируется |
 | `cc-1c-skills` | Granular skills и скрипты для конфигураций, расширений, метаданных, форм, ролей, СКД, MXL, XDTO, ИБ и web-сценариев | [`Nikolay-Shirokov/cc-1c-skills`](https://github.com/Nikolay-Shirokov/cc-1c-skills) |
 | Skill `bsp` | Проверка и применение API БСП с учётом версии библиотеки | [`brake71/1c-ssl-skills`](https://github.com/brake71/1c-ssl-skills) |
-| Правила | 16 правил разработки, архитектуры, проверки, тестирования и read-only ревью | `.opencode/rules/` |
+| Правила | 14 правил разработки, архитектуры, проверки, тестирования и ревью; | `.opencode/rules/` |
 | Команды | Команда запуска согласованного YAxUnit-сценария | `./content/commands/yaxunit-test.md` |
-| Субагент `onec-reviewer` | Независимое ревью заданного diff, файлов или архитектурного решения только для чтения | `./content/agents/onec-reviewer.md` |
 | BSL Language Server MCP | Семантический поиск, навигация и статический анализ BSL через локальный `stdio`-процесс | [bsl-language-server`](https://1c-syntax.github.io/bsl-language-server/features/McpMode/) |
 | 1C MCP Toolkit, опционально | Фактические данные и метаданные базы, журнал регистрации и справка BSL для планирования и диагностики | [`ROCTUP/1c-mcp-toolkit`](https://github.com/ROCTUP/1c-mcp-toolkit); установка стенда только добавляет подключение |
 | YAxUnit, опционально | Тестовый движок, расширение `tests` и команда запуска со свежими артефактами | XML расширений, локальная тестовая база и `/yaxunit-test` |
