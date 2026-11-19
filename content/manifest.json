@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
-  "version": "1.4.6",
+  "version": "1.5.0",
   "features": [],
   "files": [
     {
       "source": "content/agents/onec-reviewer.md",
       "target": ".opencode/agents/onec-reviewer.md",
       "requires": [],
-      "sha256": "ba9f9084eb639803e293f1d48f1c29ff2bc453b96115ef66be3fd57fc464e72e"
+      "sha256": "239e2c813ed5afa13ce2d23588abd98825d55028ff2a85205de57457835f516e"
     },
     {
       "source": "content/commands/yaxunit-test.md",
@@ -43,7 +43,7 @@
       "source": "content/rules/coding-standards.md",
       "target": ".opencode/rules/coding-standards.md",
       "requires": [],
-      "sha256": "44b290080ea66d15eda2116d38adfbb8f3ace23f233cd095438862ad67ae0535"
+      "sha256": "55e86164b88d8f89058505caa7fdcded8ffc760f59621c40ebd1b4f11a651576"
     },
     {
       "source": "content/rules/forms.md",
@@ -85,7 +85,7 @@
       "source": "content/rules/source-search.md",
       "target": ".opencode/rules/source-search.md",
       "requires": [],
-      "sha256": "8281ef99fb8c71bca9a6420bc5381983e61bd9e65a4774eea3834750f852f2a2"
+      "sha256": "a5449683ca9a523a91ab0e0d43dcd526270fdb4625b819ac847ec168037a5858"
     },
     {
       "source": "content/rules/testing.md",
@@ -103,7 +103,7 @@
       "source": "content/rules/verification.md",
       "target": ".opencode/rules/verification.md",
       "requires": [],
-      "sha256": "1874ae768339dc6f6c4bf88885e963d3b6019aad0a4d72255b79fb6198393610"
+      "sha256": "a3c6e1d0c1db208f7cda5c0962c088a5b1e502804fa04d86aeeda3af6aba79f7"
     },
     {
       "source": "content/rules/yaxunit.md",

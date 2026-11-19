@@ -10,6 +10,7 @@
 - XML-исходники конфигурации и расширений.
 - Git и `AGENTS.md`.
 - MCP BSL Language Server.
+- MCP 1C MCP Toolkit - только добавить настройку.
 - YAxUnit и `tests` — при необходимости.
 
 ## 1. Общие правила
@@ -50,6 +51,7 @@
 - Доступные информационные базы.
 - Наличие и версии YAxUnit и `tests`.
 - Наличие и версию BSL Language Server.
+- Наличие настройки 1C MCP Toolkit (1c_mcp_toolkit) в `opencode.jsonc`.
 
 Рекурсивно найди `Configuration.xml`, исключив `.git`, `.opencode`, `tools`, `build` и временные каталоги.
 
@@ -84,6 +86,7 @@
 | Тестовая база          | Выбор dev/test базы, подтверждение её непродуктивного назначения и допустимости изменений        |
 | Изменения базы         | Перечень загрузок, обновлений, изменений свойств расширений и допустимых операций восстановления |
 | Инструменты            | Какие установленные программы разрешено обновить; путь установки BSL Language Server (по умолчанию `C:\bsl-language-server`)            |
+| 1C MCP Toolkit         | Нестандартный endpoint/канал. Уточнить порт. По умолчанию добавить `1c_mcp_toolkit` с URL `http://127.0.0.1:6003/mcp`; замену существующего отличающегося подключения согласовать |
 | Git                    | Разрешение на первый коммит, если существующий репозиторий не имеет истории                      |
 | Существующий AGENTS.md | Заменить или обновить |
 
@@ -288,7 +291,9 @@ opencode.jsonc
 
 Коммит выполняй после финальной проверки по условиям раздела 10.
 
-## 8. Настройка MCP BSL Language Server
+## 8. Настройка MCP
+
+### 8.1. BSL Language Server
 
 Если сервер отсутствует или обновление утверждено:
 
@@ -324,6 +329,46 @@ mcp.servers.bsl-language-server:
 
 Сохраняй другие настройки OpenCode и MCP.
 
+### 8.2. Опциональный 1C MCP Toolkit
+
+В приведенный ниже пример настройки, подставь уточненный порт, либо подставь порт по умолчанию. При наличии существующей настройки, замени настройкой из текущего примера.
+
+Пример настройки подключения для opencode.jsonc:
+
+```jsonc
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "1c_mcp_toolkit": {
+        "type": "remote",
+        "url": "http://127.0.0.1:6003/mcp",
+        "oauth": false,
+        "timeout": {
+          "startup": 15000,
+          "catalog": 15000,
+          "execution": 120000
+        }
+      }
+    }
+  },
+  "permissions": [
+    { "action": "1c_mcp_toolkit_execute_query", "resource": "*", "effect": "ask" },
+    { "action": "1c_mcp_toolkit_execute_code", "resource": "*", "effect": "ask" }
+  ],
+  "agents": {
+    "plan": {
+      "permissions": [
+        { "action": "1c_mcp_toolkit_execute_code", "resource": "*", "effect": "deny" }
+      ]
+    }
+  }
+}
+```
+
+Подключение не проверяй, mcp может быть недоступным
+
+
 ## 9. Создание AGENTS.md
 
 Используй `AGENTS-TEMPLATE.md` исходного комплекта.
@@ -332,10 +377,8 @@ mcp.servers.bsl-language-server:
 
 1. Укажи фактические XML-компоненты и пути.
 2. Зафиксируй утверждённые области изменений.
-3. Добавь команды проверки проекта.
-4. Настрой условную маршрутизацию `.opencode/rules/*.md`.
-5. Сохрани непротиворечащие пользовательские правила.
-6. Удали неприменимые шаблонные положения и placeholders.
+3. Проверь указанную и настрой при необходимости условную маршрутизацию `.opencode/rules/*.md`.
+4. Удали неприменимые шаблонные положения и placeholders.
 
 В проекте должен быть только AGENTS.md, шаблон `AGENTS-TEMPLATE.md` Не копируй в проект.
 
@@ -352,7 +395,8 @@ mcp.servers.bsl-language-server:
 | Базы | JSON корректен, ID и aliases уникальны, подключение работает |
 | YAxUnit | Расширения, свойства, alias `yaxunit-test` |
 | Git | Исключены секреты и вложенные репозитории |
-| MCP | `opencode mcp list` показывает `connected`; `document_symbols` и `analyze_file` выполняются на BSL-файле |
+| MCP BSL Language Server | `opencode mcp list` показывает `connected`; `document_symbols` и `analyze_file` выполняются на BSL-файле |
+| MCP 1C MCP Toolkit (опциональный) | Добавлена настройка в opencode.jsonc |
 | AGENTS.md | Корректные пути, маршрутизация, отсутствие placeholders |
 | Рабочий каталог | Временные файлы удалены, изменения ожидаемые |
 
